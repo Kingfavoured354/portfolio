@@ -162,7 +162,7 @@ export function Contact() {
 
           {sent ? (
             <p role="status" className="mt-4 text-center text-sm font-medium text-primary">
-              Opening WhatsApp with your message — just hit send there to reach me.
+              Opening WhatsApp with your message · just hit send there to reach me.
             </p>
           ) : null}
         </form>

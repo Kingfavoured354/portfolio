@@ -39,11 +39,12 @@ export const profile = {
   intro: "Hi, I'm Peter Kinyanjui",
   heading: {
     lead: "I design & build",
-    highlight: "digital experiences",
     tail: "people love to use.",
   },
+  /** Rotated through in the hero headline for a dynamic feel. */
+  roles: ["websites", "mobile apps", "brand identities", "user interfaces"],
   description:
-    "Computer Science graduate and multidisciplinary developer based in Nairobi — blending graphic design, UI/UX, and full-stack web & mobile development to ship products that look sharp and perform.",
+    "Computer Science graduate and multidisciplinary developer based in Nairobi · blending graphic design, UI/UX, and full-stack web & mobile development to ship products that look sharp and perform.",
   stats: [
     { value: "BSc", label: "Computer Science" },
     { value: "10+", label: "Projects built" },
@@ -72,7 +73,7 @@ export const servicesSection = {
   eyebrow: "What I Do",
   title: "Services",
   subtitle:
-    "From first concept to final deploy — design and development crafted to help your brand stand out and convert.",
+    "From first concept to final deploy · design and development crafted to help your brand stand out and convert.",
   services: [
     {
       title: "UI/ UX Design",
@@ -89,6 +90,11 @@ export const servicesSection = {
       description: "Fast, accessible websites built on a clean architecture.",
       image: "/images/services/web-dev.jpg",
     },
+    {
+      title: "Graphic Design",
+      description: "Logos, brand identities, and visuals that make you memorable.",
+      image: "/images/services/graphic-design.jpg",
+    },
   ] satisfies readonly Service[],
 } as const;
 
@@ -96,7 +102,7 @@ export const projectsSection = {
   eyebrow: "Recent Work",
   title: "Projects",
   subtitle:
-    "A selection of live products I've designed and built — click any card to explore the real site.",
+    "A selection of live products I've designed and built · click any card to explore the real site.",
   projects: [
     {
       title: "Pill Palace",
@@ -136,7 +142,7 @@ export const contactSection = {
   title: "Let's Talk",
   heading: "Have a project in mind? Let's build something remarkable together.",
   subtitle:
-    "Fill in the form and your message opens straight in WhatsApp — or reach me directly through any of the channels below.",
+    "Fill in the form and your message opens straight in WhatsApp · or reach me directly through any of the channels below.",
   channels: [
     { label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
     { label: "WhatsApp", value: WHATSAPP_DISPLAY, href: `https://wa.me/${WHATSAPP_NUMBER}` },
@@ -144,7 +150,7 @@ export const contactSection = {
   ] satisfies readonly ContactDetail[],
 } as const;
 
-// NOTE: placeholder testimonials — swap in real client quotes when available.
+// NOTE: placeholder testimonials · swap in real client quotes when available.
 export const testimonialsSection = {
   eyebrow: "What Clients",
   title: "Say",
@@ -177,7 +183,7 @@ export const testimonialsSection = {
 
 export const footer = {
   description:
-    "Computer Science graduate and multidisciplinary developer in Nairobi — crafting clean, high-performing websites, apps, and brand visuals.",
+    "Computer Science graduate and multidisciplinary developer in Nairobi · crafting clean, high-performing websites, apps, and brand visuals.",
   navigation: navLinks.slice(0, 5),
   contact: [
     { label: "WhatsApp", value: WHATSAPP_DISPLAY, href: `https://wa.me/${WHATSAPP_NUMBER}` },

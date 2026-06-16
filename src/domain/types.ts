@@ -1,5 +1,5 @@
 /**
- * Domain entities for the portfolio. Pure types — no framework or UI concerns.
+ * Domain entities for the portfolio. Pure types · no framework or UI concerns.
  */
 
 export type Theme = "light" | "dark";

@@ -72,7 +72,7 @@ export function Projects() {
                   href={project.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${project.title} — open live site in a new tab`}
+                  aria-label={`${project.title} · open live site in a new tab`}
                   className="block"
                 >
                   <div className={"relative overflow-hidden " + (featured ? "aspect-4/3 sm:aspect-21/9" : "aspect-4/3")}>

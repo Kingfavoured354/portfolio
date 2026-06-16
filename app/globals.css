@@ -16,13 +16,13 @@
   --foreground: #0f1320;
   --muted: #5a6473;
 
-  --primary: #10b981;
-  --primary-strong: #059669;
-  --primary-soft: #34d399;
+  --primary: #0037a8;
+  --primary-strong: #00256f;
+  --primary-soft: #3a72e8;
   --primary-foreground: #ffffff;
 
   --star: #ff8a3d;
-  --ring: rgba(16, 185, 129, 0.55);
+  --ring: rgba(0, 55, 168, 0.55);
 }
 
 .dark {
@@ -33,13 +33,13 @@
   --foreground: #ffffff;
   --muted: #9aa3b2;
 
-  --primary: #10b981;
-  --primary-strong: #059669;
-  --primary-soft: #34d399;
+  --primary: #0037a8;
+  --primary-strong: #00256f;
+  --primary-soft: #3a72e8;
   --primary-foreground: #ffffff;
 
   --star: #ff8a3d;
-  --ring: rgba(16, 185, 129, 0.6);
+  --ring: rgba(0, 55, 168, 0.6);
 }
 
 @theme inline {

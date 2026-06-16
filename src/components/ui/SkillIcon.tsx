@@ -1,7 +1,7 @@
 import type { SkillIcon as SkillIconKey } from "@/src/domain/types";
 
 /**
- * Stylised, brand-coloured icons for the skills grid. Decorative — the skill
+ * Stylised, brand-coloured icons for the skills grid. Decorative · the skill
  * name is rendered as text alongside, so these are `aria-hidden`.
  */
 const icons: Record<SkillIconKey, React.ReactNode> = {

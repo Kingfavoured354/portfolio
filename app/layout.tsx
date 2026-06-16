@@ -11,7 +11,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Peter Kinyanjui — Designer & Full-Stack Developer",
+  title: "Peter Kinyanjui · Designer & Full-Stack Developer",
   description:
     "Portfolio of Peter Kinyanjui, a Nairobi-based designer and full-stack web & mobile developer building clean, high-performing digital products.",
 };

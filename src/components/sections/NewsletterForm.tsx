@@ -19,7 +19,7 @@ export function NewsletterForm() {
       return;
     }
 
-    // MVP: no backend yet — acknowledge the valid submission.
+    // MVP: no backend yet · acknowledge the valid submission.
     setStatus({ state: "success", message: "Thanks! You're subscribed." });
     setEmail("");
   }

@@ -14,7 +14,7 @@ import { useEffect, useRef } from "react";
 import { SkillIcon } from "@/src/components/ui/SkillIcon";
 import { skillsSection } from "@/src/data/content";
 
-/* Shared easing — a refined "premium" ease-out curve. */
+/* Shared easing · a refined "premium" ease-out curve. */
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 /* Cards reveal one after another (staggered). */
@@ -28,7 +28,7 @@ const card: Variants = {
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.55, ease: EASE } },
 };
 
-/* Rings all fill together — `custom` carries each skill's target level. */
+/* Rings all fill together · `custom` carries each skill's target level. */
 const ring: Variants = {
   hidden: { pathLength: 0 },
   visible: (level: number) => ({
