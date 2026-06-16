@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode (Tailwind v4 toggles on prefers-color-scheme by default) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ----------------------------------------------------------------------------
+   Design tokens
+   Light is the :root default; .dark overrides. The portfolio ships dark-first,
+   so the document is rendered with the `dark` class by default (see layout).
+---------------------------------------------------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f5fa;
+  --surface: #ffffff;
+  --surface-2: #f0f1f7;
+  --border: rgba(15, 19, 32, 0.08);
+  --foreground: #0f1320;
+  --muted: #5a6473;
+
+  --primary: #10b981;
+  --primary-strong: #059669;
+  --primary-soft: #34d399;
+  --primary-foreground: #ffffff;
+
+  --star: #ff8a3d;
+  --ring: rgba(16, 185, 129, 0.55);
+}
+
+.dark {
+  --background: #080b16;
+  --surface: #11141f;
+  --surface-2: #161a28;
+  --border: rgba(255, 255, 255, 0.08);
+  --foreground: #ffffff;
+  --muted: #9aa3b2;
+
+  --primary: #10b981;
+  --primary-strong: #059669;
+  --primary-soft: #34d399;
+  --primary-foreground: #ffffff;
+
+  --star: #ff8a3d;
+  --ring: rgba(16, 185, 129, 0.6);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-star: var(--star);
+
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Visible focus ring for keyboard users */
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility text-gradient-primary {
+  background-image: linear-gradient(
+    100deg,
+    var(--primary-soft) 0%,
+    var(--primary) 45%,
+    var(--primary-strong) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-primary {
+  background-image: linear-gradient(
+    135deg,
+    var(--primary-soft) 0%,
+    var(--primary) 50%,
+    var(--primary-strong) 100%
+  );
+}
+
+/* ----------------------------------------------------------------------------
+   Motion — subtle, premium ambient movement. Disabled for users who prefer
+   reduced motion via the base-layer rule above.
+---------------------------------------------------------------------------- */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
 }
