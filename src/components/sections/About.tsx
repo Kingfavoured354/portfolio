@@ -138,7 +138,14 @@ export function About() {
                 {cta.contactMe}
                 <ArrowUpRight />
               </Button>
-              <Button as="a" href="#" variant="outline">
+              <Button
+                as="a"
+                href="/peter-mungai-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                variant="outline"
+              >
                 {cta.downloadResume}
                 <Download />
               </Button>
